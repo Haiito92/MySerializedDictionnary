@@ -47,7 +47,7 @@ namespace _Project.Runtime.Scripts.Utilities
         public new void Remove(TKey key)
         {
             //Remove from Serialized List
-            TryGetValue(key, out TValue value);
+            if(!TryGetValue(key, out TValue value)) return;
             
             SerializableKeyValuePair oldPair = new(key, value);
             
