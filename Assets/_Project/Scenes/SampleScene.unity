@@ -168,9 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _serializableDictionary:
     _keyValuePairs: []
-  _stringToAdd: fezfzfe
-  _intToAdd: 740
-  _stringToRemove: fezfzfe
+  _stringToAdd: 
+  _intToAdd: 0
+  _stringToRemove: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
