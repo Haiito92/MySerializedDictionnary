@@ -39,6 +39,8 @@ namespace _Project.Runtime.Scripts.Utilities
             
             //Add in Dictionary
             base.Add(key, value);
+
+            //this[key] = value;
             
             //Add in List
             _keyValuePairs.Add(newPair);
