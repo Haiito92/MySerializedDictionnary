@@ -12,7 +12,7 @@ namespace _Project.Runtime.Scripts.Utilities
         [SerializeField] private List<SerializableKeyValuePair> _keyValuePairs;
         
         [Serializable]
-        private struct SerializableKeyValuePair
+        public struct SerializableKeyValuePair
         {
             [SerializeField] private TKey _key;
             [SerializeField] private TValue _value;
