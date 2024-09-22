@@ -167,7 +167,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializableDictionary:
-    _keyValuePairs: []
+    _keyValuePairs:
+    - _key: 
+      _value: 0
+    - _key: 
+      _value: 0
+    - _key: 
+      _value: 0
+    - _key: 
+      _value: 0
   _stringToAdd: 
   _intToAdd: 0
   _stringToRemove: 
