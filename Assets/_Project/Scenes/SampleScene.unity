@@ -443,6 +443,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _myString: thyjut
+  _permut1: abva
+  _permut2: bvaa
+  _URLifyString: 'My life is boring      '
+  _trueLength: 17
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
