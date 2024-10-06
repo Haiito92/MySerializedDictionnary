@@ -121,4 +121,45 @@ public class ArrayAndStringExercice : MonoBehaviour
     
     [Button] private void UURLify() => Debug.Log(URLify(_URLifyString, _trueLength));
     #endregion
+    
+    #region Ex 4
+
+    [Header("Exercice 4")]
+    [SerializeField] private string _palindromeA;
+    [SerializeField] private string _palindromeB;
+
+    bool PalindromePermutation(string a, string b)
+    {
+        if(!IsPalindrome(a) || !IsPalindrome(b)) return false;
+
+        string sortedA = SortString(a);
+        string sortedB = SortString(b);
+
+        if (sortedA == sortedB) return true;
+        else return false;
+    }
+
+    bool IsPalindrome(string s)
+    {
+        for (int i = 0; i <= s.Length/2; i++)
+        {
+            if (s[i] != s[s.Length - 1 - i]) return false;
+        }
+
+        return true;
+    }
+
+    [Button]
+    void PalindromePermutation() => Debug.Log(PalindromePermutation(_palindromeA, _palindromeB));
+    #endregion
+
+    #region Utils
+
+    string SortString(string s)
+    {
+        char[] sArray = s.ToCharArray();
+        Array.Sort(sArray);
+        return new string(sArray);
+    }
+    #endregion
 }

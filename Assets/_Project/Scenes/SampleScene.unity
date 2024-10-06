@@ -447,6 +447,8 @@ MonoBehaviour:
   _permut2: bvaa
   _URLifyString: 'My life is boring      '
   _trueLength: 17
+  _palindromeA: abcba
+  _palindromeB: kabff
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
