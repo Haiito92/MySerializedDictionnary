@@ -153,6 +153,83 @@ public class ArrayAndStringExercice : MonoBehaviour
     void PalindromePermutation() => Debug.Log(PalindromePermutation(_palindromeA, _palindromeB));
     #endregion
 
+    #region Ex 6
+
+    [Header("Exercice 6")]
+    [SerializeField] private string _stringToCompress;
+    
+    string StringCompression(string s)
+    {
+        StringBuilder compressedString = new StringBuilder();
+        int c = 0;
+        int count = 1;
+        
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (i == 0)
+            {
+                c = s[i];
+                compressedString.Append(s[i]);
+                continue;
+            }
+
+            if (c != s[i])
+            {
+                compressedString.Append(count);
+                c = s[i];
+                compressedString.Append(s[i]);
+                count = 1;
+            }
+            else
+            {
+                count++;
+            }
+        }
+
+        compressedString.Append(count);
+
+        return compressedString.Length >= s.Length ? s : compressedString.ToString();
+    }
+
+    [Button]
+    void StringCompression() => Debug.Log(StringCompression(_stringToCompress));
+    #endregion
+
+    #region Ex 7
+
+    bool NxNMatrix90degreeRot(int[][] matrix)
+    {
+        if (matrix.Length == 0 || matrix.Length != matrix[0].Length) return false;
+        int n = matrix.Length;
+
+        for (int layer = 0; layer < n / 2; layer++)
+        {
+            int first = layer;
+            int last = n - 1 - layer;
+            for (int i = first; i < last; i++)
+            {
+                int offset = i - first;
+                int top = matrix[first][i];
+                
+                //left to top
+                matrix[first][i] = matrix[last - offset][first];
+                
+                // bottom to left
+                matrix[last - offset][first] = matrix[last][last - offset];
+                
+                //right to bottom
+                matrix[last][last - offset] = matrix[i][last];
+                
+                //top to right
+                matrix[i][last] = top;
+            }
+        }
+
+        return true;
+    }
+
+    #endregion
+    
     #region Utils
 
     string SortString(string s)
